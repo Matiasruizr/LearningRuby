@@ -75,7 +75,21 @@ else
 end
 ``` 
 
+# Conversiones
+Podemos cambiar el tipo de dato de las variables en ruby
 
+Para transformar a un string 
+```
+.to_s
+```
+Para transformar a un integer
+```
+.to_i
+```
+Para transformar a un float
+```
+.to_f
+```
 
 Otros datos de Ruby
 Algo adicional con lo que cuenta Ruby es que sin necesidad de importar módulos adicionales, es decir, una librería adicional, podríamos llamarla.
