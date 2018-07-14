@@ -92,6 +92,35 @@ Para transformar a un float
 .to_f
 ```
 
+
+# Definición e invocación de métodos
+
+Los metodos son una sección de código que podemos reutilizar y a la cual vamos a poder nombrar. Este bloque de código debe ser escrito para una tarea en específico en el programa.
+
+Nos permite reutilizar codigo, ademas de reconocer facilmente donde esta algun eventual error.
+
+Los métodos se definen en tres partes:
+
+- El encabezado o cabecera: Consta de la palabra reservada “def” seguida por el nombre del método que necesitemos y una parte opcional son los argumentos que le podemos pasar.
+- El cuerpo: Es la parte en la que va el código que debemos ejecutar.
+- El fin: Sería la palabra reservada “end”
+```
+#Sin argumento
+ def saludo
+    puts 'Hola'
+ end
+
+ saludo
+```
+```
+#Con argumento
+def saluda_persona nombre
+    puts "Hola #{nombre}"
+end
+
+saluda_persona('Matias')
+```
+
 Otros datos de Ruby
 Algo adicional con lo que cuenta Ruby es que sin necesidad de importar módulos adicionales, es decir, una librería adicional, podríamos llamarla.
 ¿Qué es un módulo? Un módulo para Ruby es cómo podríamos reunir un conjunto de funciones que van a tener un mismo fin.
