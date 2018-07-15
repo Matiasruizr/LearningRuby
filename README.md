@@ -161,6 +161,39 @@ Obtener datos de un arreglo:
 - array.drop(2): Obtiene todos los elementos menos los primeros dos
 ```
 
+# Estructuras repetitivas
+
+La estructuras repetitivas las utilizamos para iterar sobre un arreglo para obtener cierto tipo de información o manejar de alguna forma los datos que tenemos guardados.
+
+Existen 3 métodos con los cuales podemos iterar sobre un arreglo:
+
+- Método each: Vamos a invocar este método para poder ver cada uno de los elementos e ir asignando el valor que corresponde a cada espacio del arreglo.
+```
+#bucle for each
+a.each do |numero|
+    puts numero
+end
+```
+- Método for: Hace la misma función que each.
+```
+# Bucle for
+for element in a
+    puts element
+end
+```
+- Método while: Nos ayuda a determinar el tamaño total de nuestro arreglo.
+```
+#Bucle while
+i = 0
+while i < a.size
+    puts a[i]
+    i += 1
+end
+```
+
+El método each es el más utilizado en la comunidad
+
+
 Otros datos de Ruby
 Algo adicional con lo que cuenta Ruby es que sin necesidad de importar módulos adicionales, es decir, una librería adicional, podríamos llamarla.
 ¿Qué es un módulo? Un módulo para Ruby es cómo podríamos reunir un conjunto de funciones que van a tener un mismo fin.
