@@ -121,6 +121,46 @@ end
 saluda_persona('Matias')
 ```
 
+# Arreglos
+Un arreglo puede definirse como un grupo o una colección finita, homogénea y ordenada de elementos.
+
+Los arreglos en Ruby no necesariamente pueden ser de la misma clase, es decir, podemos construir un arreglo con números, cadenas, arreglos dentro de un arreglo o flotantes y eso en Ruby no afectaría o haría ningún cambio.
+
+```
+Ejemplos de arreglos en Ruby:
+array = Array.new
+array = Array.new(10)
+array = Array.new(10, “hola”)
+array = Array(1…5)
+array = [1,2,3]
+Modificar arreglos en Ruby:
+array = [1,2,3]
+array.push(4)
+array << 5
+array.unshift(0)
+array.insert(3, ´nuevo´)
+```
+
+Eliminar elementos de arreglos:
+```
+array = [1,2,3,4,5,6,7]
+
+- array.pop: Elimina el último elemento del arreglo.
+- array.shift: Elimina el primer elemento del arreglo.
+- arra.delete_at(posición del elemento): Elimina un elemento dentro del arreglo.
+- array.delete(elemento): Elimina un elemento en específico del arreglo.
+- array.uniq: Elimina los elementos repetidos del arreglo.
+- array.uniq!: Para que el cambio que hacemos con array.uniq permanezca.
+```
+Obtener datos de un arreglo:
+```
+- array.first: Obtiene el primer elemento
+- array.last: Obtiene el ultimo elemento
+- array[posición del elemento]: Obtiene un elemento que se encuentra en la posicion especificada
+- array.take(2): Obtiene los primeros dos elementos
+- array.drop(2): Obtiene todos los elementos menos los primeros dos
+```
+
 Otros datos de Ruby
 Algo adicional con lo que cuenta Ruby es que sin necesidad de importar módulos adicionales, es decir, una librería adicional, podríamos llamarla.
 ¿Qué es un módulo? Un módulo para Ruby es cómo podríamos reunir un conjunto de funciones que van a tener un mismo fin.
