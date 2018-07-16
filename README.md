@@ -274,8 +274,43 @@ Los hashes son diccionarios que podemos utilizar en Ruby.
 El siguiente hash tiene como indice el nombre
 hash = {'nombre': 'Matias'}
 
+# Blocks 
+Un bloque es una porción de código encerrada entre paréntesis {} o entre do…end. Por lo tanto, un bloque es una forma de agrupar instrucciones, y solo puede aparecer después de usar un método: el bloque empieza en la misma línea que usa el método. El código dentro del bloque no es ejectuado en el instante que el intérprete de Ruby lo encuentra: Ruby se recordará del bloque (variables locales, …) y después entra en el método, ejecutando el bloque cuando es preciso.
 
-Otros datos de Ruby
+También llamados funciones sin nombre.
+Van entre llaves {} o entre do…end.
+Depende de un método asociado para funcion
+```
+def ejecutar(&block)
+    if block_given?
+        yield
+    else
+        puts 'No tiene un bloque asignado'
+    end
+end
+
+ejecutar { puts 'Hola' }
+```
+
+# Procs y lambdas
+Son métodos sin nombre.
+Se pueden asignar a una variable.
+Se tienen qué llamar (.call) para que se puedan ejecutar.
+Lambdas es un método que está heredando todos los métodos que tiene procs.
+Proc es la clase padre de lambda
+
+Ejemplos:
+```
+saludar = proc { puts "Hola" }
+saludar.call
+```
+```
+saludar = proc {|nombre| puts "Hola #{nombre}" }
+saludar.call('Matias?)
+```
+
+
+# Otros datos de Ruby
 Todos los metodos finalizados en ? nos devuelven un booleanos
 Todos los metodos finalizados en ! hace cambios permanentes en el elemento
 Algo adicional con lo que cuenta Ruby es que sin necesidad de importar módulos adicionales, es decir, una librería adicional, podríamos llamarla.
