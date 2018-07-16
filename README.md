@@ -306,7 +306,7 @@ saludar.call
 ```
 ```
 saludar = proc {|nombre| puts "Hola #{nombre}" }
-saludar.call('Matias?)
+saludar.call('Matias')
 ```
 
 
