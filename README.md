@@ -147,7 +147,14 @@ end
 
 saludo({nombre: 'Matias', apellido: 'Ruiz'})
 ```
-
+Valores de retorno, en ruby no es necesario agregar la palabra return, pues nos retornara de manera automatica la ultima linea del metodo
+```
+defsumar(x, y)#-> Esto nos retornara la última línea sin utilizar return
+   x + y
+end
+resultado = sumar(5+7)
+puts "El resultado de la suma es #{resultado}"
+```
 
 # Arreglos
 Un arreglo puede definirse como un grupo o una colección finita, homogénea y ordenada de elementos.
