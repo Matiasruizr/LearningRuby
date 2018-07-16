@@ -168,12 +168,23 @@ array = Array.new(10)
 array = Array.new(10, “hola”)
 array = Array(1…5)
 array = [1,2,3]
+
 Modificar arreglos en Ruby:
 array = [1,2,3]
 array.push(4)
 array << 5
 array.unshift(0)
 array.insert(3, ´nuevo´)
+```
+
+Consultar elementos de arreglos:
+```
+#Primer elemento
+array[0]
+```
+```
+#Ultimo elemento
+array[-1]
 ```
 
 Eliminar elementos de arreglos:
@@ -195,6 +206,26 @@ Obtener datos de un arreglo:
 - array.take(2): Obtiene los primeros dos elementos
 - array.drop(2): Obtiene todos los elementos menos los primeros dos
 ```
+# Metodos utiles para arreglos
+Lista de métodos de arreglos en Ruby:
+
+include: Busca dentro del arreglo si existe o no el elemento que le preguntemos.
+map (map!): Funciona como each, pero adicional se puede editar o sobre escribir el valor de nuestro arreglo. Para que los cambios en el arreglo permanezcan, escribimos un signo de exclamación después del método.
+map &:even?: Even funciona en Ruby para indicarnos si el número es par o es impar. Al utilizarlo en el método map, nos va a ayudar a saber el estado de cada uno de los elementos que componen el arreglo.
+reduce
+select: Realiza una consulta entre cada uno de los elementos del arreglo y selecciona según la indicación que le demos.
+reject: Rechaza a todos los elementos del arreglo según la indicación que le demos.
+drop_while: Funciona como el método reject.
+delete_if: Este método también funciona similar al reject.
+keep_if: Funciona similar al método select.
+any?: Nos ayuda a saber si alguno de los elementos del arreglo cumple con la condición que le establezcamos.
+all?: Nos ayuda a saber si todos los elementos del arreglo cumplen con la condición que le establezcamos.
+& (intersección): Nos ayuda a crear una intersección diciéndonos qué elementos tenemos en común entre diferentes arreglos.
+asterisco (*) (por un entero y por un string): Nos ayuda a multiplicar los elementos del arreglo por el valor que le indiquemos.
+suma y resta
+collect: Es un alias del método map
+each_with_index: Nos va a devolver primero el valor y luego el index que estemos llamando.
+flatten!: Nos permite tener un arreglo simple.
 
 # Estructuras repetitivas
 
@@ -225,13 +256,28 @@ while i < a.size
     i += 1
 end
 ```
+Ejecutar un codigo N veces
+```
+numero.times{
+
+}
+```
+
+
 
 El método each es el más utilizado en la comunidad
 
 
+# Hashes
+Los hashes son diccionarios que podemos utilizar en Ruby.
+
+El siguiente hash tiene como indice el nombre
+hash = {'nombre': 'Matias'}
 
 
 Otros datos de Ruby
+Todos los metodos finalizados en ? nos devuelven un booleanos
+Todos los metodos finalizados en ! hace cambios permanentes en el elemento
 Algo adicional con lo que cuenta Ruby es que sin necesidad de importar módulos adicionales, es decir, una librería adicional, podríamos llamarla.
 ¿Qué es un módulo? Un módulo para Ruby es cómo podríamos reunir un conjunto de funciones que van a tener un mismo fin.
 ¿Para qué sirven las comillas dobles en los puts de Ruby? Podemos inyectar código Ruby dentro de una cadena.
