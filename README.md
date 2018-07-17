@@ -335,6 +335,39 @@ File.open('prueba.txt').readlines.each do |linea|
     puts linea
 end
 ```
+# Manejo de excepciones
+
+El manejo de excepciones nos sirve para controlar los errores que Ruby nos arroja por defecto cuando ejecutamos un código.
+
+Existen cierto tipo de palabras reservadas para este manejo de excepciones:
+
+
+begin, end: Para definir un bloque. (Similar a un bloque anonimo plsql)
+
+rescue: Para controlar una excepción.
+Por ejemplo, en un metodo que busca dividir 100 entre x numero, no podriamos dividir por 0
+```
+def cien_entre(a)
+    100 / a
+rescue
+     "No se puede dividir por #{a}"
+end
+
+puts cien_entre(0)
+```
+else: Código que se ejecuta si no hubo excepciones.
+```
+def cien_entre(a)
+    b = 100 / a
+rescue
+     "No se puede dividir por #{a}"
+else
+     "El resultado es #{b}"
+end
+```
+ensure: Para forzar que se ejecute código si se lanza o no una excepción.
+raise o fail: Para lanzar una excepción.
+
 
 # Otros datos de Ruby
 Todos los metodos finalizados en ? nos devuelven un booleanos
