@@ -309,6 +309,32 @@ saludar = proc {|nombre| puts "Hola #{nombre}" }
 saludar.call('Matias')
 ```
 
+# Leer archivos en ruby
+La lectura de archivos es bastante simple, 
+podemos crear o editar un nuevo archivo escribiendo 
+```
+File.open('prueba.txt','w') #W es de Write, podria ser R para Read
+```
+Esto podemos almacenarlo en una variable para tener mas control
+```
+archivo = File.open('prueba.txt','w') #W es de Write, podria ser R para Read
+```
+Podemos hacer cosas como agregarle lineas
+```
+archivo.puts 'Hola mundo!'
+archivo.close #No guardara los cambios hasta que cerremos el archivo
+```
+Podemos leer un archivo de la siguiente manera
+```
+archivo = File.open('prueba.txt','r')
+puts archivo
+```
+Tambien podemos iterar sobre cada linea del archivo de la siguiente manera
+```
+File.open('prueba.txt').readlines.each do |linea|
+    puts linea
+end
+```
 
 # Otros datos de Ruby
 Todos los metodos finalizados en ? nos devuelven un booleanos
