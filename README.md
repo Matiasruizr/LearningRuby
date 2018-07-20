@@ -384,30 +384,68 @@ Para crear un objeto nuevo utilizamos:
 ```
 ventilador1 = Ventilador.new(marca: 'Sony', velocidad: 10)
 ```
-Para hacer referencia a un elemento en especifico del objetivo lo hacemos de la siguiente manera
+
+Para poder acceder a sus distintas propiedades o modificarlas de manera externa creareamos los getters y setters cuando corresponda
+```
+class Ventilador
+    def initialize(params)
+      @marca = params[:marca]
+      @velocidad = params[:velocidad]
+    end
+    def marca
+      return @marca
+    end
+    def marca=(nueva_marca)
+      @marca = nueva_marca
+    end
+  end
+  
+  ventilador1 = Ventilador.new(marca:'Xyz', velocidad: 10)
+  
+  ventilador1.marca = 'Wxz'
+  
+  puts ventilador1.marca()
+```
+La forma abreviada de hacer esto y por lo tanto la mas utilizada seria
+```
+class Ventilador
+    attr_accessor:marca # Definimos acceso a getter y setter para marca
+    
+    def initialize(params)
+      @marca = params[:marca]
+      @velocidad = params[:velocidad]
+    end
+   
+  end
 ```
 
-```
-# scopes de variables
+# Scopes de variables
 
-Características de las variables locales:
+Variables locales:
 
 Se usan a nivel de los métodos o bloques. Esto quiere decir que su tiempo de vida es solo dentro de un método o solo dentro de un bloque.
 Deberían comenzar con minúscula o con _.
 Siempre vamos a saber exactamente hasta dónde vive una variable local.
-Características de las variables de instancia:
+
+
+Variables de instancia:
 
 Solo va a tener un valor dentro de un objeto, es decir que su tiempo de vida es solo dentro de un objeto.
 Solo cobra vida cuando vamos a iniciar una clase.
 Todas las variables de instancia inician con un solo @
-Características de las variables de clase:
+
+
+Variables de clase:
 
 Inician con dos @
 Se considera una variable que pueda ser declarada apenas inicie la clase sin necesidad de de llamarla a través de métodos o de inicializarla a través de métodos.
-Características de las variables globales:
+
+
+Variables globales:
 
 Se usan a nivel de todo el programa.
 Deberían iniciar con $.
+
 
 Podemos saber de que tipo es una variable utilizando 
 ```

@@ -9,6 +9,7 @@ class Ventilador
         end
     end
 
+
     def presentacion()
         "La marca del ventilador es: #{@marca} y la maxima velocidad es #{@velocidad}" 
     end
@@ -23,14 +24,14 @@ class Ventilador
 end
 
 puts 'Ingrese la marca del ventilador'
-g_marca = gets.chomp
-puts 'Ingrese la velocidad del ventilador, la velocidad maxiam es de 10'
-g_velocidad = gets.chomp.to_i
+_marca = gets.chomp
+puts 'Ingrese la velocidad del ventilador, la velocidad maxima es de 10'
+_velocidad = gets.chomp.to_i
 
 
-ventilador = Ventilador.new(marca: g_marca, velocidad: g_velocidad)
+ventilador1 = Ventilador.new(marca: _marca, velocidad: _velocidad)
 
-puts ventilador.presentacion
+puts ventilador1.presentacion
 
 salir = false
 
@@ -38,13 +39,14 @@ while salir == false
     puts 'Presione 1 para subir la velocidad, o presione 2 para salir'
     opcion = gets.chomp.to_i
     if opcion == 1 
-        ventilador.cambia_velocidad  
+        ventilador1.cambia_velocidad  
     elsif opcion == 2
         break
     end
 
-    puts ventilador.presentacion
+    puts ventilador1.presentacion
 end
+
 
 
 
