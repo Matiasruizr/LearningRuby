@@ -368,6 +368,56 @@ end
 ensure: Para forzar que se ejecute código si se lanza o no una excepción.
 raise o fail: Para lanzar una excepción.
 
+# Clases y objetos
+
+Podemos crear una clase pasandole al objetos sus atributos por un hash
+```
+class Ventilador
+    def initialize(params)
+        @marca = params[:marca]
+        @velocidad = params[:velocidad]
+    end
+end
+```
+
+Para crear un objeto nuevo utilizamos:
+```
+ventilador1 = Ventilador.new(marca: 'Sony', velocidad: 10)
+```
+Para hacer referencia a un elemento en especifico del objetivo lo hacemos de la siguiente manera
+```
+
+```
+# scopes de variables
+
+Características de las variables locales:
+
+Se usan a nivel de los métodos o bloques. Esto quiere decir que su tiempo de vida es solo dentro de un método o solo dentro de un bloque.
+Deberían comenzar con minúscula o con _.
+Siempre vamos a saber exactamente hasta dónde vive una variable local.
+Características de las variables de instancia:
+
+Solo va a tener un valor dentro de un objeto, es decir que su tiempo de vida es solo dentro de un objeto.
+Solo cobra vida cuando vamos a iniciar una clase.
+Todas las variables de instancia inician con un solo @
+Características de las variables de clase:
+
+Inician con dos @
+Se considera una variable que pueda ser declarada apenas inicie la clase sin necesidad de de llamarla a través de métodos o de inicializarla a través de métodos.
+Características de las variables globales:
+
+Se usan a nivel de todo el programa.
+Deberían iniciar con $.
+
+Podemos saber de que tipo es una variable utilizando 
+```
+defined? variable
+```
+# Constantes
+
+Tienen el mismo alcance que una variable, de acuerdo al lugar donde son declaradas.
+Inician con una letra mayúscula o pueden ser todas mayúsculas.
+No deberían cambiar su valor.
 
 # Otros datos de Ruby
 Todos los metodos finalizados en ? nos devuelven un booleanos
