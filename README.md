@@ -457,6 +457,35 @@ Tienen el mismo alcance que una variable, de acuerdo al lugar donde son declarad
 Inician con una letra mayúscula o pueden ser todas mayúsculas.
 No deberían cambiar su valor.
 
+# Encapsulamiento
+
+La programación orientada a objetos tiene ciertas características, como por ejemplo, el encapsulamiento.
+Estas son algunas características del encapsulamiento:
+
+Exponer el comportamiento externo de la clase mediante métodos.
+Proteger los datos internos.
+Scopes en Ruby: public, protected, private.
+Accessors.
+Tipos de Accessors:
+
+attr_reader
+attr_writer
+attr_accessor
+Los modificadores de acceso son el acceso que le podemos dar a distintos métodos, estos pueden ser:
+
+- Public. Default
+- Private. Solo van a funcionar en esa clase, no se pueden llamar desde el objeto ni pueden heredar una clase hijo.
+- Protected. No se pueden llamar una vez creado el objeto, pero sí va a poder heredar una clase hijo.
+
+#Características de las herencias en Ruby:
+
+Mecanismo para reutilizar código.
+Una clase (hija) extiende el comportamiento de otra clase (padre).
+Aplican las modificaciones de acceso.
+Se pueden sobre-escribir los métodos.
+Todas las clases heredan de BasicObject.
+No existe herencia múltiple.
+Ruby tiene una palabra reservada para el caso de herencias llamada “super”. Lo que hace super es poder obtener todas las líneas de código que tiene el mismo método en una clase padre.
 # Otros datos de Ruby
 Todos los metodos finalizados en ? nos devuelven un booleanos
 Todos los metodos finalizados en ! hace cambios permanentes en el elemento
