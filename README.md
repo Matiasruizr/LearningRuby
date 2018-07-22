@@ -486,6 +486,27 @@ Se pueden sobre-escribir los métodos.
 Todas las clases heredan de BasicObject.
 No existe herencia múltiple.
 Ruby tiene una palabra reservada para el caso de herencias llamada “super”. Lo que hace super es poder obtener todas las líneas de código que tiene el mismo método en una clase padre.
+
+# Modulos
+
+Es un conjunto de metodos variables y constantes
+Como una clase no instanciable
+Permite herencia multiple
+```
+module Modulo
+    def metodo1
+    end
+
+    class Clase1
+    end
+end
+``` 
+Para acceder al valor de un metodo debemos usar ::
+```
+Modulo::metodo1
+```
+Podemos utilizar los metodos como namespace para evitar conflictos con los nombres
+
 # Otros datos de Ruby
 Todos los metodos finalizados en ? nos devuelven un booleanos
 Todos los metodos finalizados en ! hace cambios permanentes en el elemento
