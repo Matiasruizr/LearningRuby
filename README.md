@@ -210,21 +210,35 @@ Obtener datos de un arreglo:
 Lista de métodos de arreglos en Ruby:
 
 include: Busca dentro del arreglo si existe o no el elemento que le preguntemos.
+
 map (map!): Funciona como each, pero adicional se puede editar o sobre escribir el valor de nuestro arreglo. Para que los cambios en el arreglo permanezcan, escribimos un signo de exclamación después del método.
+
 map &:even?: Even funciona en Ruby para indicarnos si el número es par o es impar. Al utilizarlo en el método map, nos va a ayudar a saber el estado de cada uno de los elementos que componen el arreglo.
+
 reduce
+
 select: Realiza una consulta entre cada uno de los elementos del arreglo y selecciona según la indicación que le demos.
+
 reject: Rechaza a todos los elementos del arreglo según la indicación que le demos.
 drop_while: Funciona como el método reject.
+
 delete_if: Este método también funciona similar al reject.
+
 keep_if: Funciona similar al método select.
+
 any?: Nos ayuda a saber si alguno de los elementos del arreglo cumple con la condición que le establezcamos.
+
 all?: Nos ayuda a saber si todos los elementos del arreglo cumplen con la condición que le establezcamos.
+
 & (intersección): Nos ayuda a crear una intersección diciéndonos qué elementos tenemos en común entre diferentes arreglos.
+
 asterisco (*) (por un entero y por un string): Nos ayuda a multiplicar los elementos del arreglo por el valor que le indiquemos.
 suma y resta
+
 collect: Es un alias del método map
+
 each_with_index: Nos va a devolver primero el valor y luego el index que estemos llamando.
+
 flatten!: Nos permite tener un arreglo simple.
 
 # Estructuras repetitivas
