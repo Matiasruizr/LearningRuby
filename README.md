@@ -521,6 +521,59 @@ Modulo::metodo1
 ```
 Podemos utilizar los metodos como namespace para evitar conflictos con los nombres
 
+
+# Mixins 
+
+Estan diseñados para que los modulos puedan utilizarse como herencia multiple.
+
+- Son una mezcla entre modulos y clases
+- Es una clase que implementa un modulo
+- Se puede crear mediante 
+
+Metodo include
+ Esto incluye las caracteristicas del metodo para todos los objetos creados con la clase Numero en este caso.
+```
+module Conversion
+    def palabra 
+        return 'uno' if @valor == 1
+        'mucho' #Esto seria el else
+    end
+end
+
+class Numero
+    include Conversion
+    attr_accessor :valor
+end
+
+num = Numero.new
+
+num.valor = 2
+puts num.palabra
+```
+Metodo extend
+ Esto incluye las caracteristicas del metodo para un objeto en especifico 
+```
+module Conversion
+    def palabra 
+        return 'uno' if @valor == 1
+        'mucho' #Esto seria el else
+    end
+end
+
+class Numero
+    attr_accessor :valor
+    def palabra
+        @valor.to_s
+    end
+end
+
+num = Numero.new
+
+num.extend(Conversion)#Solo se extiende para este objeto
+num.valor = 10
+puts num.palabra
+```
+
 # Otros datos de Ruby
 Todos los metodos finalizados en ? nos devuelven un booleanos
 Todos los metodos finalizados en ! hace cambios permanentes en el elemento
