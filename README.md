@@ -574,6 +574,25 @@ num.valor = 10
 puts num.palabra
 ```
 
+# Poliformismo
+
+Las subclases pueden definir su comportamiento propio y compartir la funcionalidad de la clase padre.
+
+los métodos se pueden sobre-escribir.
+```
+class Pajaro
+    def volar
+        puts 'Puedo volar'
+    end
+end
+
+class Pinguino < Pajaro
+    def volar
+        puts 'No puedo volar soy un pinguino'
+    end
+end
+```
+
 # Otros datos de Ruby
 Todos los metodos finalizados en ? nos devuelven un booleanos
 Todos los metodos finalizados en ! hace cambios permanentes en el elemento
