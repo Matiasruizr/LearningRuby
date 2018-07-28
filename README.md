@@ -592,6 +592,33 @@ class Pinguino < Pajaro
     end
 end
 ```
+# Gemas
+
+Para utilizar gemas simplemente utilizamos 
+
+```
+gem install nombre_de_gema
+```
+
+Y la utilizamos en nuestro archivo.rb con 
+```
+require 'nombre_de_gema'
+```
+
+Gema interesante: Rubocop, analiza el codigo y lo compara con la guia de convenciones de ruby. advirtiendonos cuando estas convenciones no se cumplieron
+```
+gem install rubocop
+```
+```
+rubocop my_app.rb
+```
+
+
+# Testing en Ruby
+
+Test Driven Development
+
+Usaremos RSpec
 
 # Otros datos de Ruby
 Todos los metodos finalizados en ? nos devuelven un booleanos

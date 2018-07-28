@@ -40,5 +40,3 @@ end
 juan = Blanco.new(nombre: 'Juan', color: 'Blanco con cafe')
 matias = Mallard.new(nombre: 'matias', color: 'Verde')
 
-juan.Presentacion
-matias.Presentacion
