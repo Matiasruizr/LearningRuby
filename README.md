@@ -620,6 +620,10 @@ Test Driven Development
 
 Usaremos RSpec
 
+# Scrapping
+
+
+
 # Otros datos de Ruby
 Todos los metodos finalizados en ? nos devuelven un booleanos
 Todos los metodos finalizados en ! hace cambios permanentes en el elemento
