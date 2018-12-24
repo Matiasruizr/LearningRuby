@@ -637,3 +637,9 @@ Todos los metodos finalizados en ! hace cambios permanentes en el elemento
 Algo adicional con lo que cuenta Ruby es que sin necesidad de importar módulos adicionales, es decir, una librería adicional, podríamos llamarla.
 ¿Qué es un módulo? Un módulo para Ruby es cómo podríamos reunir un conjunto de funciones que van a tener un mismo fin.
 ¿Para qué sirven las comillas dobles en los puts de Ruby? Podemos inyectar código Ruby dentro de una cadena.
+
+
+# Metodos utiles
+
+x.class : Devuelve el tipo de dato para la variable x
+x.methods : Devuelve todos los metodos disponibles para esta varialb
