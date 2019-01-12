@@ -204,6 +204,15 @@ array = [1,2,3,4,5,6,7]
 - array.delete(elemento): Elimina un elemento en específico del arreglo.
 - array.uniq: Elimina los elementos repetidos del arreglo.
 - array.uniq!: Para que el cambio que hacemos con array.uniq permanezca.
+- array.include? "elemento": Devuelve si existe o no este objeto
+- array.count {|x| x == "q" } : Devuelve cuantos elementos cumplen esta condicion
+- array.map {|x| x *2 } : Devuelve un array con todos sus elmentos multiplicados por 2
+- array.select {|x| x.odd } : Devuelve un array filtrando la condicion (como filter de JS)
+- array.min: Devuelve el elemento más pequeño
+- array.max: Delueve el elemento más grande
+- array.sum: Devuelve la suma de todo
+- array.sort: Devuelve el arreglo ordenado
+
 ```
 Obtener datos de un arreglo:
 ```
@@ -213,6 +222,13 @@ Obtener datos de un arreglo:
 - array.take(2): Obtiene los primeros dos elementos
 - array.drop(2): Obtiene todos los elementos menos los primeros dos
 ```
+
+# Transformando un String en un Array y viceversa
+
+"hola mundo".split("")
+"hola mundo".split.map { |x| x.ord }
+"hola mundo".split.map { |x| x.upcase }.join
+
 # Metodos utiles para arreglos
 Lista de métodos de arreglos en Ruby:
 
