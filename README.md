@@ -264,6 +264,18 @@ each_with_index: Nos va a devolver primero el valor y luego el index que estemos
 
 flatten!: Nos permite tener un arreglo simple.
 
+# Rangos
+
+Que fácil es contar los elementos generados por un array
+
+('aa'..'zz').to_a.count
+=> 676
+Aunque elementos decimales no pueden ser convertibles a un arreglo, si intentamos convertir un rango decimal a un arreglo nos va a devolver un error, por suerte si se pueden utilizar otros métodos determinísticos como include? o member?
+Si el primer valor del rango es un entero y el segundo es un decimal, todo el rango se convierte en entero.
+El valor decimal del ultimo dato del rango no es redondeado sino que es truncado (osea no se toma en cuenta el valor decimal, por lo que 4.4 y 4.6 quedan finalmente como un simple 4)
+El valor de los rangos tienen que ser del mismo tipo, si pongo un numero y una letra, el rango no se crea, otra forma de crear el rango .
+Los rangos también pueden elaborarse a partir de otros tipos de objetos pero estos tienen que ser compatibles.
+
 # Estructuras repetitivas
 
 La estructuras repetitivas las utilizamos para iterar sobre un arreglo para obtener cierto tipo de información o manejar de alguna forma los datos que tenemos guardados.
