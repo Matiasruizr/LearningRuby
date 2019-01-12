@@ -306,10 +306,21 @@ El método each es el más utilizado en la comunidad
 
 
 # Hashes
-Los hashes son diccionarios que podemos utilizar en Ruby.
+Es una estructura que almacena datos como un diccionario lo haría (valor -> 10. Información asociada a ese valor)
+Los hashes son diccionarios llave valor que podemos utilizar en Ruby.
 
 El siguiente hash tiene como indice el nombre
-hash = {'nombre': 'Matias'}
+hash = {'Nombre': 'Matias'}
+hash["apellido"] = "Matias"
+
+hash.has_value? "Matias": Devuelve si existe o no el valor "Matias" en alguna llave
+hash.has_key? "Nombre": Devuelve si existe la llave Nombre
+hash.merge(otrohash): Mezcla dos hash
+hash.invert: Invierte valores a llaves y llaves a valores
+hash.transform_values {|x| x.uppercase }: Transforma todos los valores
+hash.map {|k,v| "El usuario tiene como #{k}: #{v}"}: Modifica los valores a su antojo, se suele ocupar como parametro k y v (key, value)
+array.to_h: Transforma un array en hash
+
 
 # Blocks 
 Un bloque es una porción de código encerrada entre paréntesis {} o entre do…end. Por lo tanto, un bloque es una forma de agrupar instrucciones, y solo puede aparecer después de usar un método: el bloque empieza en la misma línea que usa el método. El código dentro del bloque no es ejectuado en el instante que el intérprete de Ruby lo encuentra: Ruby se recordará del bloque (variables locales, …) y después entra en el método, ejecutando el bloque cuando es preciso.
