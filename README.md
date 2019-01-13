@@ -276,6 +276,37 @@ El valor decimal del ultimo dato del rango no es redondeado sino que es truncado
 El valor de los rangos tienen que ser del mismo tipo, si pongo un numero y una letra, el rango no se crea, otra forma de crear el rango .
 Los rangos también pueden elaborarse a partir de otros tipos de objetos pero estos tienen que ser compatibles.
 
+
+# Regex o «expresiones regulares»
+
+Una expresión regular viene a ser un patrón, que se ajusta a un string para que coincida o no, son una poderosa herramienta para trabajar con texto.
+
+Un regex se declara entre slash “/”
+Un regex puede tener multiples matches
+Algunas abreviaciones para clases de caracteres
+
+Todas las abreviaciones precedentes, también tienen una forma negada. Para ello, se pone la misma letra en mayúsculas:
+Expresión -> Significado
+.	cualquier carácter|
+[]	especificación por rango. P.ej: [a-z], una letra de la a, a la z
+\w	letra o número; es lo mismo que [0-9A-Za-z]
+\W	cualquier carácter que no sea letra o número
+\s	carácter de espacio; es lo mismo que [ \t\n\r\f]
+\S	cualquier carácter que no sea de espacio
+\d	número; lo mismo que [0-9]
+\D	cualquier carácter que no sea un número
+\b	retroceso (0x08), si está dentro de un rango
+\b	límite de palabra, si NO está dentro de un rango
+\B	no límite de palabra
+*	cero o más repeticiones de lo que le precede
++	una o más repeticiones de lo que le precede
+$	fin de la línea
+{m,n}	como menos m, y como mucho n repeticiones de lo que le precede
+?	al menos una repetición de lo que le precede; lo mismo que {0,1}
+()	agrupar expresiones
+|*	operador lógico O, busca lo de antes o lo después
+
+
 # Estructuras repetitivas
 
 La estructuras repetitivas las utilizamos para iterar sobre un arreglo para obtener cierto tipo de información o manejar de alguna forma los datos que tenemos guardados.
