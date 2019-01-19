@@ -690,6 +690,30 @@ gem install rubocop
 rubocop my_app.rb
 ```
 
+Bundler nos permite gestionar las dependencias de librerias(gemas) para nuestros proyectos ruby
+Para instalar bundler ejecutamos el comando
+
+gem install bundler
+Ahora disponemos del comando bundle. Con el comando bundle init generamos un archivo llamado Gemfile donde podemos definir las dependencias de gemas para nuestro proyecto ruby
+
+Agregando gemas a Gemfile
+
+gem 'faker'
+Es una buena practica especificar la version
+
+gem 'faker', '~> 1.9'
+Ahora es el momento de confirmar nuestras dependencias utilizando el comando
+
+bundle install
+Esta instruccion verifica las dependencias y procede a instalar las gemas. Tambien generará un archivo llamado Gemfile.lock que especifica las versiones de gemas utilizadas en nuestro proyecto
+
+Donde buscar gemas:
+
+Rubygems
+
+The Ruby Toolbox
+
+
 
 # Testing en Ruby
 
